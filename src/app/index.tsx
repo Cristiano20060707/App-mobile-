@@ -1,13 +1,27 @@
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, View } from "react-native";
 
-import { Button } from "../components/button"
+import { useState } from "react";
+import { Button } from "../components/button";
+
+
+const [name,setName] = useState("Cristiano")
+
+const changeName = () => {
+    setName("Ronaldo")
+};
 
 export default function Index() {
+
+    const [name,setName] = useState("Cristiano")
+
+    const changeName = () => {
+        setName("Ronaldo")
+    };
+
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Hi! my name is Cristiano 😊</Text>
-            <Button title = "test button"/>
-            <Button title = "second button"/>
+            <Text style={styles.titulo}>Hi! my name is {name} 😊</Text>
+            <Button title = "Change the name" onPress={changeName}/>
         </View>
     )
 }
