@@ -19,11 +19,11 @@ export default function Index() {
     };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.titulo}>Hi! my name is {name} 😊</Text>
-            <Button title = "Change the name" onPress={changeName}/>
-        </View>
-    )
+    <View style={styles.container}>
+        <Text testID="welcome-text" style={styles.titulo}>Hi! my name is {name} 😊</Text>
+        <Button testID="change-name-button" title="Change the name" onPress={changeName}/>
+    </View>
+)
 }
 
 const styles = StyleSheet.create({
